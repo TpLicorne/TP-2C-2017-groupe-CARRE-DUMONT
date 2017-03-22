@@ -1,12 +1,35 @@
 
-/** Systeme de 5 journee**/
+const {Spiderman} = require('./spiderman');
+const {Deadpool} = require('./deadpool');
+const {Pony} = require('./poney');
 
-var EventEmitter = require('events').EventEmitter;
 
-var i;
-for (i=0;i<=5;i++) {
-    var day = new EventEmitter();
-    day.on('day', () => console.log('nuit'));
-    day.prependListener('day', () => console.log('jour'));
-    day.emit('day');
+let instance = null;
+
+
+class Unicorn
+{
+    constructor()
+    {
+        this.energy = 10;
+        if(instance)
+        {
+            instance = new Deadpool();
+        }
+
+    }
+    destructor () {
+
+    }
+
+    LostEnergy(){
+
+        console.log("good");
+        console.log(this.energy)
+    }
+    Transformation()
+    {
+        console.log('Je suis une licorne');
+    }
 }
+module.exports = {Unicorn};
