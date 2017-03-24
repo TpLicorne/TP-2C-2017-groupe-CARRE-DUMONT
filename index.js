@@ -18,7 +18,7 @@ for (i = 0; i <= 5; i++) {
   console.log('');
   d.winLife(u, p);
   s.do(u, p);
-  d.transform(p, u, s);
+  d.transform(p, u);
   console.log('');
   day.emit('night');
   console.log('');
