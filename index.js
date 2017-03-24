@@ -10,7 +10,7 @@ const d = new Deadpool();
 const p = new Pony();
 const u = new Unicorn();
 
-for (i = 0; i <= 5; i++) {
+for (i = 0; i <= 10; i++) {
   const day = new EventEmitter();
   day.on('day', () => console.log('jour'));
   day.on('night', () => console.log('nuit'));
