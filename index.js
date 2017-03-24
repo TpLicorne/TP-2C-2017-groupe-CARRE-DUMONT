@@ -28,7 +28,7 @@ for (i=0;i<=5;i++) {
 
     d.WinLife(u,p);
     s.do(u,p);
-    d.transform(p,u);
+    d.transform(p,u,s);
 
     console.log ("");
 
