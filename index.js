@@ -4,7 +4,6 @@ const {Deadpool} = require('./app/deadpool');
 const {Pony} = require('./app/poney');
 const {Unicorn} = require('./app/licorne');
 
-
 let i;
 const s = new Spiderman();
 const d = new Deadpool();
