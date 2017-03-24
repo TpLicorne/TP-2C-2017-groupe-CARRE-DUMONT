@@ -16,7 +16,7 @@ class Pony {
     constructor(){
 
         this.energy = 0;
-        this.nb = 10;
+        this.nbPony = 10;
 
         if (instanceD && instanceS && instanceU)
         {
@@ -24,24 +24,21 @@ class Pony {
             instanceS = new Spiderman();
             instanceD = new Deadpool();
         }
-
-    }
-    destructor()
-    {
-
     }
 
     WinEnergy()
     {
         this.energy=10;
     }
-    Transform()
+
+    Transform(instanceU)
     {
-
-            const lin = new Unicorn();
-            lin.LostEnergy;
-            this.destructor;
-
+         this.nbPony = this.nbPony -1;
+         instanceU.transformation();
+    }
+    untransform()
+    {
+        this.nbPony = this.nbPony +1;
     }
 }
 

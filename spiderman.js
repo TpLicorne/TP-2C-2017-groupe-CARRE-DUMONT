@@ -19,15 +19,31 @@ class Spiderman
         }
     }
 
-    faire()
+    do(instanceU,instanceP)
     {
-        const r= (Math.floor(Math.random() * 2));
-        if (r==1) {
-            console.log('Je fais du poney');
-        } else {
+        if ( instanceP.nbPony != 0 && instanceU.nbUnicorn != 0 )
+        {
+            const r= (Math.floor(Math.random() * 2));
+            if (r==1) {
+                console.log('Spiderman fait du poney');
+                instanceP.energy=0;
 
-            console.log('Je fais de la licorne');
+            } else {
+                console.log('Spiderman fait de la licorne');
+                instanceU.LostEnergy(instanceP);
+            }
         }
+        else if ( instanceP.nbPony == 0 )
+        {
+            console.log('Spiderman fait de la licorne');
+            instanceU.LostEnergy(instanceP);
+        }
+        else
+        {
+            console.log('Spiderman fait du poney');
+
+        }
+
     }
 }
 

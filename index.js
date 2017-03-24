@@ -1,15 +1,19 @@
 /** Systeme de 5 journee**/
 
-const {Spiderman} = require('./spiderman');
-const {Deadpool} = require('./deadpool');
-const {Pony} = require('./poney');
+const {Spiderman} = require('./app/spiderman');
+const {Deadpool} = require('./app/deadpool');
+const {Pony} = require('./app/poney');
+const {Unicorn} = require('./app/licorne');
 
 
 var EventEmitter = require('events').EventEmitter;
 var i;
+
+
 const s = new Spiderman;
 const d = new Deadpool;
 const p = new Pony;
+const u = new Unicorn;
 
 
 for (i=0;i<=5;i++) {
@@ -21,11 +25,15 @@ for (i=0;i<=5;i++) {
 
     day.emit('day');
     console.log ("");
-    s.faire();
-    d.transform(p);
+
+    d.WinLife(u,p);
+    s.do(u,p);
+    d.transform(p,u);
+
     console.log ("");
 
     day.emit('night');
+
     console.log ("");
     d.LostLife();
     p.WinEnergy();

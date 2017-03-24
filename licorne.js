@@ -7,7 +7,9 @@ const {Deadpool} = require('./deadpool');
 const {Pony} = require('./poney');
 
 
-let instance = null;
+let instanceS = null;
+let instanceP = null;
+let instanceD = null;
 
 
 class Unicorn
@@ -15,24 +17,27 @@ class Unicorn
     constructor()
     {
         this.energy = 10;
-        if(instance)
+        this.nbUnicorn = 0;
+        if(instanceS && instanceP && instanceD)
         {
-            instance = new Deadpool();
+            instanceD = new Deadpool();
+            instanceS = new Spiderman();
+            instanceP = new Pony();
         }
-
-    }
-    destructor () {
-
     }
 
-    LostEnergy(){
+    LostEnergy(instanceP){
 
-        console.log("good");
-        console.log(this.energy)
+        this.energy =  0;
+        this.nbUnicorn = this.nbUnicorn -1;
+        instanceP.untransform();
     }
-    Transformation()
-    {
-        console.log('Je suis une licorne');
+
+    transformation() {
+
+        this.nbUnicorn = this.nbUnicorn +1;
+
     }
+
 }
 module.exports = {Unicorn};
