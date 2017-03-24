@@ -1,11 +1,8 @@
 const {Pony} = require('./poney');
 const {Unicorn} = require('./licorne');
-const {Spiderman} = require('./spiderman');
 
 let instance1 = null;
 let instance2 = null;
-let instance3 = null;
-const d = null;
 
 class Deadpool {
   constructor() {
@@ -13,12 +10,11 @@ class Deadpool {
     if (instance1 && instance2) {
       instance1 = new Unicorn();
       instance2 = new Pony();
-      instance3 = new Spiderman();
     }
   }
 
   winLife(instance1, instance2) {
-    if (instance1.nbUnicorn !== 0) {
+    if (instance1.nbUnicorn) {
       if (this.life < 50 && instance1.nbUnicorn !== 1) {
         instance1.lostEnergy(instance2);
         instance1.lostEnergy(instance2);
@@ -42,7 +38,7 @@ class Deadpool {
   }
 
   lostLife() {
-    if (this.life !== 0) {
+    if (this.life) {
       const r = (Math.floor(Math.random() * this.life));
       this.life = r;
       console.log('Il reste ', this.life, ' pv a Deadpool');
@@ -53,18 +49,10 @@ class Deadpool {
       console.log('Deadpool n\'a plus de vie.');
     }
   }
-  transform(instance2, instance1, instance3) {
+  transform(instance2, instance1) {
     let i;
 
-    if (instance3.doPony === 1) {
-      const d = 1;
-    } else if (instance3.doPony === 0) {
-      const d = 0;
-    }
-
-    const p = instance2.nbPony - d;
-
-    for (i = 0; i < p; i++) {
+    for (i = 0; i < instance2.nbPony; i++) {
       const v = (Math.floor(Math.random() * 2));
 
       if (instance2.energy === 10 && v === 1) {
@@ -77,7 +65,6 @@ class Deadpool {
 
     console.log('Le nombre de Poney :', instance2.nbPony);
     console.log('Le nombre de Licorne : ', instance1.nbUnicorn);
-    instance3.doPony = 0;
   }
 }
 module.exports = {Deadpool};
