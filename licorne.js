@@ -29,7 +29,7 @@ class Unicorn
     LostEnergy(instanceP){
 
         this.energy =  0;
-        this.nbUnicorn = this.nbUnicorn -1;
+        this.nbUnicorn = this.nbUnicorn - 1;
         instanceP.untransform();
     }
 

@@ -12,6 +12,7 @@ class Spiderman
 {
     constructor()
     {
+        this.doPony= null;
         if (instanceP && instanceU)
         {
             instanceU = new Unicorn();
@@ -26,21 +27,25 @@ class Spiderman
             const r= (Math.floor(Math.random() * 2));
             if (r==1) {
                 console.log('Spiderman fait du poney');
-                instanceP.energy=0;
+                this.doPony=1;
+
 
             } else {
                 console.log('Spiderman fait de la licorne');
+                this.doPony=0;
                 instanceU.LostEnergy(instanceP);
             }
         }
         else if ( instanceP.nbPony == 0 )
         {
             console.log('Spiderman fait de la licorne');
+            this.doPony=0;
             instanceU.LostEnergy(instanceP);
         }
         else
         {
             console.log('Spiderman fait du poney');
+            this.doPony=1;
 
         }
 

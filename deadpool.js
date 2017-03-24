@@ -3,6 +3,8 @@ const {Unicorn} = require('./licorne');
 
 let instance1 = null;
 let instance2=null;
+let instance3=null;
+let d=null;
 
 class Deadpool
 {
@@ -13,6 +15,7 @@ class Deadpool
         {
             instance1 = new Unicorn();
             instance2 = new Pony();
+            instance3 = new Spiderman();
         }
     }
 
@@ -67,11 +70,23 @@ class Deadpool
             console.log("Deadpool n'a plus de vie.");
         }
     }
-    transform (instance2, instance1)
+    transform (instance2, instance1, instance3)
     {
         var i;
 
-        for (i=0;i<instance2.nbPony; i++)
+        if (instance3.doPony == 1)
+        {
+            const d=1;
+        }
+        else if (instance3.doPony == 0)
+        {
+            const d=0;
+        }
+
+        const p = instance2.nbPony - d;
+
+
+        for (i=0; i < p; i++)
         {
             const v= (Math.floor(Math.random() * 2));
 
@@ -85,8 +100,11 @@ class Deadpool
                 console.log("Tu ne peux pas te transformer en licorne");
             }
         }
-        console.log ("Le nombre de Poney :", instance2.nbPony);
-        console.log ("Le nombre de Licorne : ", instance1.nbUnicorn);
+
+
+        console.log ("Le nombre de Poney :",  instance2.nbPony);
+        console.log ("Le nombre de Licorne : ", instance1.nbUnicorn );
+        instance3.doPony = 0 ;
 
 
     }
