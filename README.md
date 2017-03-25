@@ -20,6 +20,7 @@ https://yarnpkg.com/en/docs/install pour windows
 https://www.cakebrew.com/ pour Mac. 
 
 -Installer nmp avec la commande : yarn add npm
+
 -Installer les composants de npm avec la commande : npm install
 
 # Commande d'utilisation:
