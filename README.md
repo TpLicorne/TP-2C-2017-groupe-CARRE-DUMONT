@@ -8,7 +8,7 @@ Avec Jetbrains webstorm :
 
 
 
-Composition du répertoire :
+# Composition du répertoire :
 
 Le répectoire est composé d'un sous-répertoire , app , d'un fichier index.js et d'autres fichiers .
 
@@ -21,7 +21,7 @@ Dans le répertoire app, vous trouvez les fichiers suivant:
 . poney.js
 
 
-Licence :
+# Licence :
 
 Le programme utilise une licence MIT
 
