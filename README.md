@@ -5,5 +5,5 @@ Composition du répertoire :
 
 Licence :
 
-"license": "MIT"
+license: MIT
 
