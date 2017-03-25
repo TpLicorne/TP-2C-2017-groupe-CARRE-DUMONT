@@ -2,17 +2,23 @@
 
 # Installation:
 
+Avant de pouvoir 
+
 Avec un terminal :
 
 Avec Jetbrains webstorm :
 
 
+# Commande d'utilisation:
+
+
+Pour lancer le programme
 
 # Composition du répertoire :
 
 Le répectoire est composé d'un sous-répertoire , app , d'un fichier index.js et d'autres fichiers .
 
-Le fichier index.js nous permet d'executer le programme
+Le fichier index.js nous permet d'executer le programme. 
 
 Dans le répertoire app, vous trouvez les fichiers suivant:
 . deadpool.js
