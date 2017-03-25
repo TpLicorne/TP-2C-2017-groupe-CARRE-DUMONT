@@ -12,6 +12,8 @@ Composition du répertoire :
 
 Le répectoire est composé d'un sous-répertoire , app , d'un fichier index.js et d'autres fichiers .
 
+Le fichier index.js nous permet d'executer le programme
+
 Dans le répertoire app, vous trouvez les fichiers suivant:
 . deadpool.js
 . spiderman.js
