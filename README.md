@@ -1,6 +1,6 @@
 # TP-2C-2017-groupe-CARRE-DUMONT
 
-Installation:
+# Installation:
 
 Avec un terminal :
 
