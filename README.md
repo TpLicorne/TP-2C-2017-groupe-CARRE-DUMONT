@@ -2,17 +2,21 @@
 
 # Installation:
 
-Avant de pouvoir 
+Avant de pouvoir lancer le programme,
 
-Avec un terminal :
+Avec un terminal : 
+-Utiliser la commande : cmd /c start https://github.com/TpLicorne/TP-2C-2017-groupe-CARRE-DUMONT pour accéder au repository.
+-Cloner le projet
 
 Avec Jetbrains webstorm :
-
+-Installer npm avec la commande : npm install
 
 # Commande d'utilisation:
 
-
-Pour lancer le programme
+Pour lancer le programme :
+Dans le terminal de Jetbrains, utiliser les commandes :
+-npm init
+-npm start
 
 # Composition du répertoire :
 
