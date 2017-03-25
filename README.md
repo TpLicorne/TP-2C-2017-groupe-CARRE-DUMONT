@@ -9,6 +9,15 @@ Avec un terminal :
 -Cloner le projet
 
 Avec Jetbrains webstorm :
+-Installer yarn avec :
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install -y yarn puis configurer avec : yarn config set prefix ~/.yarn
+add to you .bashrc or .zshrc : `export PATH=$PATH:$(yarn global bin)` pour linux
+
+https://yarnpkg.com/en/docs/install pour windows
+
+https://www.cakebrew.com/ pour Mac. 
 -Installer npm avec la commande : npm install
 
 # Commande d'utilisation:
